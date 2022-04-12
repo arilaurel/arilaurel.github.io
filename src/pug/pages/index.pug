@@ -1,0 +1,24 @@
+extends ../layouts/base.pug
+
+block config
+    - var bodyClass = 'sb-nav-fixed'
+    - var pageTitle = 'Ari Laurel';
+    - var index = true;
+    
+block content 
+  .pure-g
+    .hero-shot.pure-u-1
+      #heroShot
+        img#rectangular(src="assets/forest.jpg")
+
+    .pure-u-1.pure-u-md-6-8.centered
+        .pure-u-1.center-text
+          h1.titleFont Ari Laurel
+          .pure-u-1
+            a.menu-link(href='writing.html') Writing
+            a.menu-link(href='extra.html') Extras
+            a.menu-link(href='contact.html') Contact
+          .pure-u-3-5
+            p.oswald #{intro}
+
+

@@ -1,0 +1,17 @@
+extends ../layouts/base-sidebar.pug
+
+block config
+    - var bodyClass = 'sb-nav-fixed'
+    - var pageTitle = 'Extra';
+    - var index = true;
+    
+block content 
+  .pure-u-1
+      #extras
+        each item, i in extras
+          .card
+            h3= item.title
+            a.journal-link(href=item.link)= item.linkText
+            p= item.additionalInfo
+
+

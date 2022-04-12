@@ -1,0 +1,59 @@
+
+#menuContents {
+  margin-top: 30vh;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+#indexLink {
+  color: #aaa;
+  font-size: 30px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #04aa6d;
+}
+
+
+div.content {
+  margin-left: 200px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 48em) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+  }
+  #indexLink {
+    font-size: 24px;
+
+  }
+  .sidebar a {
+    float: left;
+    font-size: 16px;
+  }
+  div.content {
+    margin-left: 0;
+  }
+
+  #menuContents {
+    margin-top: 0vh;
+  }
+}

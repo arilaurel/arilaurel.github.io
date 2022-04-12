@@ -1,0 +1,24 @@
+extends ../layouts/base-sidebar.pug
+
+block config
+    - var bodyClass = 'sb-nav-fixed'
+    - var pageTitle = 'Ari Laurel';
+    - var index = true;
+
+block content
+  .pure-g
+    .pure-u-1
+      img#writingBackground(src="assets/temple.jpg")
+      //img#writingBackground.pure-img(src="assets/temple.jpg")
+
+    .pure-u-1.pure-u-md-3-4.left
+      .pure-u-1.pure-u-md-3-5
+        #writings
+          each item, i in journals
+            .card
+              h3= item.journal
+              a.journal-link(href=item.link)= item.linkText
+              p= item.additionalInfo
+    script(src='js/writing.js')
+
+

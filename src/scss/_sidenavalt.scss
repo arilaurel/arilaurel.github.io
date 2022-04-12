@@ -1,0 +1,80 @@
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+$sidenav-width: 300px;
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+}
+#layout.active #menu {
+  left: $sidenav-width;
+  width: $sidenav-width;
+}
+
+#layout.active .menu-link {
+  left: $sidenav-width;
+}
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+*/
+
+#menu {
+  margin-left: -$sidenav-width; /* "#menu" width */
+  width: $sidenav-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* so the menu or its navicon stays above all content */
+  background: #191818;
+  overflow-y: auto;
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+  .header,
+  .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #layout {
+    padding-left: $sidenav-width; /* left col width "#menu" */
+    left: 0;
+  }
+  #menu {
+    left: $sidenav-width;
+  }
+
+  .menu-link {
+    position: fixed;
+    left: $sidenav-width;
+    display: none;
+  }
+
+  #layout.active .menu-link {
+    left: $sidenav-width;
+  }
+}
