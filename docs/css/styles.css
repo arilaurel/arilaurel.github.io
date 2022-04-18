@@ -1918,6 +1918,9 @@ h1 {
 
 #background {
   background: url("assets/temple.jpg") no-repeat center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -1997,6 +2000,14 @@ h1 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+
+  #background {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: static;
+    height: 30vh;
+  }
 }
 #menuContents {
   margin-top: 30vh;
@@ -2049,6 +2060,7 @@ div.content {
 
   .sidebar a {
     float: left;
+    padding: 16px 6px;
     font-size: 16px;
   }
 
