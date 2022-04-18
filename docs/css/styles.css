@@ -1859,11 +1859,11 @@ a:hover {
 
 .intro {
   font-family: "Quattrocento";
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .pure-img-responsive {
@@ -1929,6 +1929,7 @@ h1 {
 
 .cardTitle {
   font-family: "Yeseva One";
+  font-size: 25px;
 }
 
 .journalLink {
@@ -1938,7 +1939,7 @@ h1 {
 
 .cardInfo {
   font-family: "Source Sans Pro";
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
 }
 
@@ -2107,7 +2108,7 @@ form label,
 
 form label,
 form legend {
-  font-size: 0.825rem;
+  font-size: 18px;
   margin-bottom: 0.5rem;
 }
 
