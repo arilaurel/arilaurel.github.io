@@ -2023,6 +2023,7 @@ h1 {
   height: 100%;
   overflow: auto;
   background-color: black;
+  z-index: 1003;
 }
 
 #indexLink {
@@ -2053,7 +2054,6 @@ div.content {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
   }
 
   #indexLink {
