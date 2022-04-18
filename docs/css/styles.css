@@ -11,8 +11,9 @@ Licensed under the BSD License.
 https://github.com/pure-css/pure/blob/master/LICENSE
 */
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-@import url("https://fonts.googleapis.com/css?family=Oswald");
-@import url("https://fonts.googleapis.com/css?family=Quattrocento");
+@import url("https://fonts.googleapis.com/css?family=Yeseva+One");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 .pure-g {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
@@ -1853,15 +1854,16 @@ a:hover {
 }
 
 .titleFont {
-  font-family: "Oswald";
+  font-family: "Josefin Sans";
+}
+
+.intro {
+  font-family: "Quattrocento";
+  font-size: 18px;
 }
 
 h1 {
   font-size: 48px;
-}
-
-p {
-  font-family: "Quattrocento";
 }
 
 .pure-img-responsive {
@@ -1898,7 +1900,7 @@ p {
 }
 
 .menu-link {
-  font-family: "Oswald";
+  font-family: "Josefin Sans";
   color: #ae8d09;
   margin: 5px;
 }
@@ -1907,12 +1909,26 @@ p {
   background-color: #333;
   margin: 15px;
   padding: 15px;
-  border-radius: 25px;
 }
 
 #writingBackground {
   position: fixed;
   z-index: -1;
+}
+
+.cardTitle {
+  font-family: "Yeseva One";
+}
+
+.journalLink {
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+}
+
+.cardInfo {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  font-style: italic;
 }
 
 #writings {
@@ -1997,6 +2013,7 @@ p {
   display: block;
   padding: 16px;
   text-decoration: none;
+  font-family: "Source Sans Pro";
 }
 
 .sidebar a.active {
@@ -2035,6 +2052,8 @@ div.content {
 }
 #fs-frm {
   margin-top: 200px;
+  font-family: "Source Sans Pro";
+  color: #ae8d09;
 }
 
 /* reset */

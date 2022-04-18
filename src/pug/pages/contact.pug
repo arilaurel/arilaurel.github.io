@@ -9,6 +9,7 @@ block content
   .pure-g.center
     .pure-u-11-12.pure-u-md-3-5
       form#fs-frm(name='simple-contact-form' accept-charset='utf-8' action='https://formspree.io/f/xdobwgbq' method='post')
+        p For publicity inquiries, readings, or other collaborations, you can reach me directly using the contact form below.
         fieldset#fs-frm-inputs
           label(for='full-name') Full Name
           input#full-name(type='text' name='name' placeholder='' required='')
@@ -17,6 +18,6 @@ block content
           label(for='message') Message
           textarea#message(rows='5' name='message' placeholder='' required='')
           input#email-subject(type='hidden' name='_subject' value='Contact Form Submission')
-        input(type='submit' value='Submit')
+        input(type='submit' value='Send')
 
 

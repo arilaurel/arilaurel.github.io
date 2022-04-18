@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald");
-@import url("https://fonts.googleapis.com/css?family=Quattrocento");
+@import url("https://fonts.googleapis.com/css?family=Yeseva+One");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -41,15 +42,16 @@ a:hover {
 }
 
 .titleFont {
-  font-family: "Oswald";
+  font-family: "Josefin Sans";
+}
+
+.intro {
+  font-family: "Quattrocento";
+  font-size: 18px;
 }
 
 h1 {
   font-size: 48px;
-}
-
-p {
-  font-family: "Quattrocento";
 }
 
 .pure-img-responsive {

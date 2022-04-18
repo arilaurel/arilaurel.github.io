@@ -10,8 +10,8 @@ block content
       #extras
         each item, i in extras
           .card
-            h3= item.title
-            a.journal-link(href=item.link)= item.linkText
-            p= item.additionalInfo
+            h3.cardTitle= item.title
+            a.journalLink(href=item.link)= item.linkText
+            p.cardInfo= item.additionalInfo
 
 

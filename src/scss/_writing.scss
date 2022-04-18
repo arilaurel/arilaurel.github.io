@@ -2,7 +2,6 @@
   background-color: #333;
   margin: 15px;
   padding: 15px;
-  border-radius: 25px;
 }
 
 #writingBackground {
@@ -12,6 +11,21 @@
 
 body {
   //  overflow: hidden;
+}
+
+.cardTitle {
+  font-family: "Yeseva One";
+}
+
+.journalLink {
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+}
+
+.cardInfo {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  font-style: italic;
 }
 
 #writings {

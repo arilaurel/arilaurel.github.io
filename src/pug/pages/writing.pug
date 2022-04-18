@@ -16,9 +16,10 @@ block content
         #writings
           each item, i in journals
             .card
-              h3= item.journal
-              a.journal-link(href=item.link)= item.linkText
-              p= item.additionalInfo
+              .pure-u-4-5
+                h3.cardTitle= item.journal
+                a.journalLink(href=item.link)= item.linkText
+                p.cardInfo= item.additionalInfo
     script(src='js/writing.js')
 
 
