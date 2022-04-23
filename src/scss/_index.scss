@@ -15,6 +15,16 @@
   height: 100%;
 }
 
+.titleFont {
+  font-family: "Josefin Sans";
+}
+
+.intro {
+  font-family: "Quattrocento";
+  font-size: 22px;
+  line-height: 1.4;
+}
+
 @media screen and (max-width: 48em) {
   #heroShot {
     height: 80vw;
