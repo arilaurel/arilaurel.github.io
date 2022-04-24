@@ -6,7 +6,7 @@ block config
     - var index = true;
 
 block content
-  .pure-g
+  .pure-g.center
     #background
     //.pure-u-1
       img#writingBackground(src="assets/temple.jpg")
@@ -16,7 +16,7 @@ block content
         #writings
           each item, i in journals
             .card
-              .pure-u-4-5
+              .pure-u-11-12.writingMargin
                 h3.cardTitle= item.journal
                 a.journalLink(href=item.link)= item.linkText
                 p.cardInfo= item.additionalInfo

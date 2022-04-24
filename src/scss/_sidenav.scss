@@ -43,6 +43,7 @@ div.content {
     left: 0;
   }
   #indexLink {
+    margin-top: -4px;
     font-size: 24px;
   }
   .sidebar a {
@@ -56,6 +57,12 @@ div.content {
   }
 
   #menuContents {
-    margin-top: 0vh;
+      margin: 0;
+    margin-left: 2%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
   }
 }
