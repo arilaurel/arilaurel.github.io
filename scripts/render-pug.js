@@ -54,7 +54,7 @@ async function getExtraData(filePath) {
   if (filePath.match(/index/)) {
     const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
     return {
-      intro: intro,
+      intro: intro.split('\n'),
     };
   }
   if (filePath.match(/extra/)) {
