@@ -52,10 +52,10 @@ async function getExtraData(filePath) {
     };
   }
   if (filePath.match(/index/)) {
-    const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
-    return {
-      intro: intro.split('\n'),
-    };
+    // const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
+    // return {
+    //   intro: intro.split('\n'),
+    // };
   }
   if (filePath.match(/extra/)) {
     const extras = await Extra.find({}).exec();
@@ -63,4 +63,5 @@ async function getExtraData(filePath) {
       extras: extras,
     }
   }
+  return {}
 }
