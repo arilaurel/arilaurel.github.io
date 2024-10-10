@@ -16,9 +16,10 @@
 #indexLink {
   color: #aaa;
   font-size: 30px;
+  margin-bottom: 0px;
 }
 
-.sidebar a {
+.sidebar a,h2 {
   display: block;
   padding: 16px;
   text-decoration: none;
@@ -46,7 +47,7 @@ div.content {
     margin-top: -4px;
     font-size: 24px;
   }
-  .sidebar a {
+  .sidebar a,h2 {
     float: left;
     padding: 16px 6px;
     font-size: 16px;
