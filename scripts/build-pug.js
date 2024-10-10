@@ -4,19 +4,13 @@ import {renderPug} from './render-pug.js';
 import fs from 'fs';
 import process from 'process';
 
-import mongoose from 'mongoose';
-const url = 'mongodb://127.0.0.1:27017/ari?';
-let client = await mongoose.connect(url);
-const db = mongoose.connection;
-
 const srcPath = upath.resolve('./src');
 
 
 await Promise.all(sh.find(srcPath).map(async (path) => {
-  return _processFile(path, db);
+  return _processFile(path);
 }));
 
-client.connection.close();
 
 
 async function _processFile(filePath) {

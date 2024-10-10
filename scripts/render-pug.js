@@ -7,20 +7,20 @@ import prettier from 'prettier';
 import {Article, Extra} from '../src/database/schema.js';
 
 
-export async function renderPug(filePath, db) {
+export async function renderPug(filePath) {
   console.log(filePath);
   const destPath = filePath.replace(/src\/pug\/\pages/, 'docs').replace(
     /\.pug$/, '.html');
   const srcPath = upath.resolve('./src');
 
-  const extras = await getExtraData(filePath, db);
+  const writing = await getWriting(filePath);
 
   console.log(`### INFO: Rendering ${filePath} to ${destPath}`);
   const html = pug.renderFile(filePath, {
     doctype: 'html',
     filename: filePath,
     basedir: srcPath,
-    ...extras
+    ...writing
   });
 
   const destPathDirname = upath.dirname(destPath);
@@ -44,24 +44,13 @@ export async function renderPug(filePath, db) {
 
 let writings = [];
 
-async function getExtraData(filePath) {
+async function getWriting(filePath) {
   if (filePath.match(/writing/)) {
-    const writings = await Article.find({}).exec();
+    const writings = fs.readFileSync('./content/writing.json', "utf-8", 'r');
+    const jsonData = JSON.parse(writings);
     return {
-      journals: writings,
+      journals: jsonData,
     };
-  }
-  if (filePath.match(/index/)) {
-    // const intro = fs.readFileSync('./content/intro.txt', 'UTF-8', 'r');
-    // return {
-    //   intro: intro.split('\n'),
-    // };
-  }
-  if (filePath.match(/extra/)) {
-    const extras = await Extra.find({}).exec();
-    return {
-      extras: extras,
-    }
   }
   return {}
 }
